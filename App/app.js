@@ -24,11 +24,11 @@ const departmentDataSchema = new Schema({
 // подключение
 mongoose.connect("mongodb://localhost:27017/departmentData",{useNewUrlParser: true,
     useFindAndModify: false,
-    useCreateIndex: true}/*,
+    useCreateIndex: true},
     (err)=>{
         if(err){
             console.log('Не удалось подключить Базу Данных, включите базу данных и перезапустите программу!')
-        }}*/);
+        }});
 
 const DepartmentData = mongoose.model("DepartmentData", departmentDataSchema);
 
